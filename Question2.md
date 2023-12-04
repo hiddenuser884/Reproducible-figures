@@ -70,7 +70,7 @@ linear_model <- lm(data = penguins_clean, flipper_length_mm ~ body_mass_g)
 summary(linear_model)
 ```
 
-First to investigate the influence of species on this relationship. I run new linear models to find the R^2 values for each different species.
+To test the second hypothesis, first to investigate the influence of species on this relationship. I run new linear models to find the R^2 values for each different species.
 
 Next, in order to test the significance of the influence of species for this relationship, I can use the r package "car" which allows for the use of ANCOVA tests. The interaction between body mass and species in this model well help determine if the relationship between body mass and flipper length is different between species.
 
