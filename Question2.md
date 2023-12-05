@@ -50,6 +50,8 @@ ggplot(data = penguins_clean, aes(x = body_mass_g, y = flipper_length_mm, colour
   geom_smooth(method = "lm", se = TRUE, aes(group = 1), color = "black") +
   theme_bw()
 ```
+![Exploratory figure](https://github.com/hiddenuser884/Reproducible-figures/assets/152880283/2025f364-feca-472e-9ec0-2495c3e44fae)
+
 
 ## Hypothesis
 
