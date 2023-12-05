@@ -70,6 +70,9 @@ linear_model <- lm(data = penguins_clean, flipper_length_mm ~ body_mass_g)
 summary(linear_model)
 ```
 
+<img width="490" alt="linear model summary" src="https://github.com/hiddenuser884/Reproducible-figures/assets/152880283/727fdd99-727a-484d-8700-dd43bc7a6871">
+
+
 To test the second hypothesis, first to investigate the influence of species on this relationship. I run new linear models to find the R^2 values for each different species.
 
 Next, in order to test the significance of the influence of species for this relationship, I can use the r package "car" which allows for the use of ANCOVA tests. The interaction between body mass and species in this model well help determine if the relationship between body mass and flipper length is different between species.
@@ -108,6 +111,9 @@ library(car)
 ancova_model <- aov(flipper_length_mm ~ body_mass_g + species, data = penguins_clean)
 summary(ancova_model)
 ```
+
+<img width="394" alt="ANCOVA model summary" src="https://github.com/hiddenuser884/Reproducible-figures/assets/152880283/721b2c1a-bdf0-4984-a2be-63b64391a731">
+
 ## Results & Discussion
 
 The summary table from that linear regression stats test provides a lot of information on the plotted relationship. However, for the sake of the first hypothesis, the most important value is the adjusted R-squared. The adjusted R-sqaured value accounts for any overfitting from the regular R-squared. R-squared is a measure of how well the independent variable in the linear regression explains the variability of the dependent variable. In this context, 'Adjusted R-squared' is used to measure how much of the variation in flipper length is explained by body mass. R-squared values are bound between 0 and 1, higher values indicate stronger relationships. 
@@ -152,3 +158,6 @@ ggplot(data = penguins_clean, aes(x = body_mass_g, y = flipper_length_mm, colour
                                                " \nP =",signif(summary(linear_gentoo)$coef[2,4], 5)),
              inherit.aes = FALSE, colour = "blue")
 ```
+
+![ANCOVA results graph](https://github.com/hiddenuser884/Reproducible-figures/assets/152880283/c82678de-7b17-4c47-853d-e10469c6543a)
+
