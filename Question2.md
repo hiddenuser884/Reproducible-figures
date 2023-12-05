@@ -127,7 +127,7 @@ ggplot(data = penguins_clean, aes(x = body_mass_g, y = flipper_length_mm)) +
                                                " \nSlope =",signif(linear_model$coef[[2]], 5),
                                                " \nP =",signif(summary(linear_model)$coef[2,4], 5)))
 
-![Linear model results figure](https://github.com/hiddenuser884/Reproducible-figures/assets/152880283/5629dab2-c4cb-4468-821a-b1116b11ef4f)
+(https://github.com/hiddenuser884/Reproducible-figures/assets/152880283/5629dab2-c4cb-4468-821a-b1116b11ef4f)
 
 
 ```
