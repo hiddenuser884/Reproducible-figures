@@ -126,11 +126,12 @@ ggplot(data = penguins_clean, aes(x = body_mass_g, y = flipper_length_mm)) +
                                                "\nIntercept =",signif(linear_model$coef[[1]],5 ),
                                                " \nSlope =",signif(linear_model$coef[[2]], 5),
                                                " \nP =",signif(summary(linear_model)$coef[2,4], 5)))
-
-(https://github.com/hiddenuser884/Reproducible-figures/assets/152880283/5629dab2-c4cb-4468-821a-b1116b11ef4f)
-
-
 ```
+
+![Linear model results figure](https://github.com/hiddenuser884/Reproducible-figures/assets/152880283/476f4c52-20fa-4fc4-ad9d-bda7e1c766d8)
+
+
+```{r}
 The second hypothesis is tested using an ANCOVA statistical test where the interaction between species and body mass is measured. The ANCOVA summary table is interpreted by regarding the significance of the p value of the interaction (in this case, the interaction is considered in the 'species' row). The p value of the interaction < 2e-16. As this value is signficant, there is evidence to suggest that the relationship between body mass and flipper length is different across different species. As such, the null hypothesis can be rejected. 
 
 Likewise, to give a visual demonstration of this result, the graph is plotted once more, this time showing the relationships for each individual species.
