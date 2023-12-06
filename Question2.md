@@ -120,6 +120,8 @@ summary(ancova_model)
 
 ## Results & Discussion
 
+### Linear model analysis
+
 The summary table from that linear regression stats test provides a lot of information on the plotted relationship. However, for the sake of the first hypothesis, the most important value is the adjusted R-squared. The adjusted R-sqaured value accounts for any overfitting from the regular R-squared. R-squared is a measure of how well the independent variable in the linear regression explains the variability of the dependent variable. In this context, 'Adjusted R-squared' is used to measure how much of the variation in flipper length is explained by body mass. R-squared values are bound between 0 and 1, higher values indicate stronger relationships. 
 
 #### The results of the linear regression produce an Adjusted R-squared value of 0.7583. The high value demonstrates a very strong relationship, suggesting that body mass explains a lot of the variation in flipper length. Additionally, the significance of this value is supported by the provided F-test which produces a p-value < 2.2e-16 which is much smaller than 0.05. This allows us to reject the null hypothesis and claim that the relationship is not likely due to chance.
@@ -140,6 +142,8 @@ ggplot(data = penguins_clean, aes(x = body_mass_g, y = flipper_length_mm)) +
 
 ![Linear model results figure](https://github.com/hiddenuser884/Reproducible-figures/assets/152880283/476f4c52-20fa-4fc4-ad9d-bda7e1c766d8)
 
+
+### ANCOVA analysis
 
 
 #### The second hypothesis is tested using an ANCOVA statistical test where the interaction between species and body mass is measured. The ANCOVA summary table is interpreted by regarding the significance of the p value of the interaction (in this case, the interaction is considered in the 'species' row). The p value of the interaction < 2e-16. As this value is signficant, there is evidence to suggest that the relationship between body mass and flipper length is different across different species. As such, the null hypothesis can be rejected. 
