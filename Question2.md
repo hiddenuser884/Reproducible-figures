@@ -31,6 +31,8 @@ All of these cleaning functions are done below through a pipeline, defining a ne
 
 ```{r}
 
+source("functions/cleaning.r") #R file containing the defined functions that are used below
+
 penguins_clean <- penguins_raw %>%
     clean_column_names() %>%
     shorten_species() %>%
