@@ -31,7 +31,7 @@ All of these cleaning functions are done below through a pipeline, defining a ne
 
 ```{r}
 
-source("functions/cleaning.r") #R file containing the defined functions that are used below
+source("functions/cleaning.r") #R file containing the defined functions that are used below (this can be found in the repository)
 
 penguins_clean <- penguins_raw %>%
     clean_column_names() %>%
@@ -44,7 +44,7 @@ penguins_clean <- penguins_raw %>%
 head(penguins_clean)
 ```
 
-Now that the dataset has been cleaned, a graph can be plotted to observe the data. Using ggplot, a scatterplot can be made to show the relationship between flipper length and body mass. The code for this is below:
+Now that the dataset has been cleaned, a graph can be plotted to observe the data. Using ggplot, a scatterplot can be made to show the relationship between flipper length and body mass, seperating the species by colour. The code for this is below:
 ```{r - Plottoing the exploratory figure}
 ggplot(data = penguins_clean, aes(x = body_mass_g, y = flipper_length_mm, colour = species)) +
   geom_point() +
