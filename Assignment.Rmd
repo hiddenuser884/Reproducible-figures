@@ -1,5 +1,3 @@
-## QUESTION 2: Data Pipeline
-
 ## Introduction
 
 Presented with the palmerpenguins dataset, I begin a data analysis to investigate the relationship between body mass and flipper length, considering the influence of species. The first step in data exploration is to install and load all the relevant packages. These packages include ggplot2 (to produce graphs), janitor (to help clean the dataset), dplyr (which allows us to use the pipe function), and palmerpenguins (which provides the dataset). This is done below:
